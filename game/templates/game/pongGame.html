@@ -1,0 +1,27 @@
+{% extends 'game/main.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/pongGameStyle.css">
+<style>
+    body{
+        background: #1A233A;
+    }
+</style>
+
+<div id="gameContainer" class="container my-5">
+    <div>
+        <h3 style="color: chartreuse;">PONG GAME</h3>
+    </div>
+    <canvas id="gameBoard" width="500" height="560"></canvas>
+    <div id="scoreText" style="color: aqua;">0 : 0</div>
+    <button id="resetBtn">Reset Game</button>
+</div>
+
+<script src="/static/pongGame.js"></script>
+{% endblock content %}
+    
+
+
+

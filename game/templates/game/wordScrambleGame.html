@@ -1,0 +1,38 @@
+{% extends 'game/main.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/wordScrambleGame.css">
+<style>
+    body{
+        background: #1A233A;
+    }
+</style>
+
+<div class="container">
+    <h2>Word Game</h2>
+    <div class="message">
+        <h4 id="message"></h4>
+    </div>
+    <hr>
+    <div class="content">
+        <p class="word"></p>
+        <div class="details">
+            <p class="hint">Hint: <span></span></p>
+            <p class="time">Time Left: <span><b>30</b>s</span></p>
+        </div>
+        <input type="text" placeholder="Enter a Word Here">
+        <div class="buttons">
+            <button class="refresh-word">Shuffle word</button>
+            <button class="check-word">Verify word</button>
+        </div>
+    </div>
+</div>
+<script src="/static/wordScrambleGameWords.js" defer></script>
+<script src="/static/wordScrambleGameScripts.js" defer></script>
+
+
+
+{% endblock content %}
+    

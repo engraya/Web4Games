@@ -1,0 +1,25 @@
+{% extends 'game/main.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/snakeGameStyle.css">
+<style>
+  body{
+    background: url("/static/assets/img/zldaLS.jpg");
+}
+#gameContainer{
+  margin-bottom: 20px;
+  padding-top: 80px;
+}
+</style>
+
+
+<div id="gameContainer">
+  <h2 style="color: chartreuse;">SNAKE GAME</h2>
+  <canvas id="gameBoard" width="500" height="500"></canvas>
+  <div id="scoreText" style="color: aqua;">0</div>
+  <button id="resetBtn">Reset</button>
+</div>
+<script src="/static/snakeGame.js"></script>
+{% endblock content %}
